@@ -14,6 +14,6 @@ export const auth = betterAuth({
   plugins: [tanstackStartCookies()],
   trustedOrigins: [
     "http://localhost:3000",
-    "https://3000-firebase-tanstackstart-learn-1768807531958.cluster-nulpgqge5rgw6rwqiydysl6ocy.cloudworkstations.dev"
+    "https://tackstart-learn.vercel.app"
   ],
 })
