@@ -2,13 +2,14 @@
 # see: https://developers.google.com/idx/guides/customize-idx-env
 { pkgs, ... }: {
   # Which nixpkgs channel to use.
-  channel = "stable-24.05"; # or "unstable"
+  channel = "unstable"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
   packages = [
     # pkgs.go
     # pkgs.python311
     # pkgs.python311Packages.pip
-    # pkgs.nodejs_20
+    pkgs.nodejs_24
+    pkgs.pnpm_9
     # pkgs.nodePackages.nodemon
   ];
   # Sets environment variables in the workspace
@@ -36,19 +37,19 @@
       };
     };
     # Workspace lifecycle hooks
-    workspace = {
+    # workspace = {
       # Runs when a workspace is first created
-      onCreate = {
+      # onCreate = {
         # Example: install JS dependencies from NPM
         # npm-install = "npm install";
         # Open editors for the following files by default, if they exist:
-        default.openFiles = [ ".idx/dev.nix" "README.md" ];
-      };
+        # default.openFiles = [ ".idx/dev.nix" "README.md" ];
+      # };
       # Runs when the workspace is (re)started
-      onStart = {
+      # onStart = {
         # Example: start a background task to watch and re-build backend code
         # watch-backend = "npm run watch-backend";
-      };
-    };
+      # };
+    # };
   };
 }
