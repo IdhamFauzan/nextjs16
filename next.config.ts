@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
         port: "",
       },
       {
-        hostname: "expert-snail-837.convex.cloud",
+        hostname: "fastidious-mule-656.convex.cloud",
         protocol: "https",
         port: "",
       },
