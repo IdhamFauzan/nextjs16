@@ -19,7 +19,7 @@ import { Input } from "@/components/ui/input";
 import { authClient } from "@/lib/auth-client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import { useTransition } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -46,7 +46,7 @@ export default function LoginPage() {
         fetchOptions: {
           onSuccess: () => {
             toast.success("Logged in successfully");
-            router.push("/");
+            redirect("/");
           },
           onError: (error) => {
             toast.error(error.error.message);
