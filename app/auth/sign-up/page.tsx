@@ -53,7 +53,7 @@ export default function SignUpPage() {
           },
         },
       });
-      redirect("/");
+      window.location.href = '/';
     });
   }
   return (
