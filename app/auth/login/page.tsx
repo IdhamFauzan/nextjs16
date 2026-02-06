@@ -53,7 +53,7 @@ export default function LoginPage() {
           },
         },
       });
-      redirect("/");
+      window.location.href = '/';
     });
   }
   return (
