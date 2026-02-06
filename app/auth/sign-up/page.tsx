@@ -46,13 +46,14 @@ export default function SignUpPage() {
         fetchOptions: {
           onSuccess: () => {
             toast.success("Account created successfully");
-            redirect("/");
+           
           },
           onError: (error) => {
             toast.error(error.error.message);
           },
         },
       });
+      redirect("/");
     });
   }
   return (
