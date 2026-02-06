@@ -46,13 +46,14 @@ export default function LoginPage() {
         fetchOptions: {
           onSuccess: () => {
             toast.success("Logged in successfully");
-            redirect("/");
+            
           },
           onError: (error) => {
             toast.error(error.error.message);
           },
         },
       });
+      redirect("/");
     });
   }
   return (
