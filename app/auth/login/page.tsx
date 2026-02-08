@@ -73,7 +73,7 @@ export default function LoginPage() {
                   <FieldLabel>Email</FieldLabel>
                   <Input
                     aria-invalid={fieldState.invalid}
-                    placeholder="john@doe.com"
+                    placeholder="pascabowo@imail.com"
                     type="email"
                     {...field}
                   />
