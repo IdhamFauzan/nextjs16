@@ -64,7 +64,7 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-6 px-4">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl mx-auto">
-          <Card className="flex flex-col border-none shadow-md hover:shadow-lg transition-shadow duration-300">
+          <Card className="bg-secondary/35 flex flex-col border-none shadow-md hover:shadow-lg transition-shadow duration-300">
             <CardHeader>
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
                 <HomeIcon className="w-6 h-6" />
@@ -91,7 +91,7 @@ export default function Home() {
             </CardFooter>
           </Card>
 
-          <Card className="flex flex-col border-none shadow-md hover:shadow-lg transition-shadow duration-300">
+          <Card className="bg-secondary/35 flex flex-col border-none shadow-md hover:shadow-lg transition-shadow duration-300">
             <CardHeader>
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
                 <BookOpen className="w-6 h-6" />
@@ -117,7 +117,7 @@ export default function Home() {
             </CardFooter>
           </Card>
 
-          <Card className="flex flex-col border-none shadow-md hover:shadow-lg transition-shadow duration-300">
+          <Card className="bg-secondary/35 flex flex-col border-none shadow-md hover:shadow-lg transition-shadow duration-300">
             <CardHeader>
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
                 <PenTool className="w-6 h-6" />
