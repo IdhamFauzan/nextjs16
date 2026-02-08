@@ -73,7 +73,7 @@ export default function SignUpPage() {
                   <FieldLabel>Full Name</FieldLabel>
                   <Input
                     aria-invalid={fieldState.invalid}
-                    placeholder="John Doe"
+                    placeholder="Pascabowo Subianto"
                     {...field}
                   />
                   {fieldState.invalid && (
@@ -90,7 +90,7 @@ export default function SignUpPage() {
                   <FieldLabel>Email</FieldLabel>
                   <Input
                     aria-invalid={fieldState.invalid}
-                    placeholder="john@doe.com"
+                    placeholder="pascabowo@imail.com"
                     type="email"
                     {...field}
                   />
