@@ -7,16 +7,18 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { BookOpen, HomeIcon, PenTool } from "lucide-react";
+import { BookOpen, ChevronRight, HomeIcon, PenTool } from "lucide-react";
 import Link from "next/link";
+import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="flex-1 flex flex-col items-center justify-center py-16 px-4 text-center ">
+      <section className="flex-1 flex flex-col items-center justify-center py-16 px-4 text-center pt-20">
         <div className="space-y-6 max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500">
-          <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
+          <h1 className="pb-1.5 text-4xl font-extrabold tracking-tight lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
             Welcome to My Blog
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
@@ -24,17 +26,37 @@ export default function Home() {
             practices. Built with Convex, shadcn UI, and passion.
           </p>
           <div className="flex items-center justify-center gap-4 pt-4">
-            <Button asChild size="lg" className="rounded-full px-8">
-              <Link href="/blog">Start Reading</Link>
-            </Button>
             <Button
               asChild
-              variant="outline"
-              size="lg"
-              className="rounded-full px-8"
+              size="default"
+              className="rounded-full px-4 sm:px-6"
             >
-              <Link href="/create">Write a Post</Link>
+              <Link href="/blog">Start Reading</Link>
             </Button>
+            <Link
+              href="/create"
+              className="relative flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f]"
+            >
+              <span
+                className={cn(
+                  "animate-gradient absolute inset-0 block h-full w-full rounded-[inherit] bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:300%_100%] p-[1px]",
+                )}
+                style={{
+                  WebkitMask:
+                    "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  WebkitMaskComposite: "destination-out",
+                  mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  maskComposite: "subtract",
+                  WebkitClipPath: "padding-box",
+                }}
+              />
+              ✏️{" "}
+              <hr className="mx-0.5 sm:mx-2 h-4 w-px shrink-0 sm:bg-neutral-500" />
+              <AnimatedGradientText className="text-sm font-medium">
+                Write a Post
+              </AnimatedGradientText>
+              <ChevronRight className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+            </Link>
           </div>
         </div>
       </section>
@@ -123,6 +145,11 @@ export default function Home() {
           </Card>
         </div>
       </section>
+
+      <div className="absolute -top-40 -left-40 h-[500px] w-[500px] bg-purple-400/20 blur-[120px] rounded-full" />
+      <div className="absolute top-20 right-[-200px] h-[500px] w-[500px] bg-pink-400/20 blur-[120px] rounded-full" />
+      <div className="absolute bottom-[-200px] left-1/3 h-[500px] w-[500px] bg-blue-400/20 blur-[120px] rounded-full" />
+      <div className="absolute top-[200px] left-1/2 h-[500px] w-[500px] bg-sky-400/20 blur-[120px] rounded-full" />
     </div>
   );
 }
